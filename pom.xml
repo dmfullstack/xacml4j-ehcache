@@ -14,7 +14,27 @@
 
 	<properties>
 		<ehcache.version>3.0.7.RELEASE</ehcache.version>
+		<license.licenseName>lgpl_v3</license.licenseName>
 	</properties>
+
+	<inceptionYear>2009</inceptionYear>
+
+	<organization>
+		<name>Xacml4J.org</name>
+	</organization>
+
+	<licenses>
+		<license>
+			<name>The GNU Lesser General Public License, Version 3.0</name>
+			<url>http://www.gnu.org/licenses/lgpl-3.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<issueManagement>
+		<url>https://github.com/xacml4j/xacml4j-ehcache/issues</url>
+		<system>GitHub Issues</system>
+	</issueManagement>
 
 	<dependencies>
 		<dependency>
@@ -59,6 +79,21 @@
 					<source>1.6</source>
 					<target>1.6</target>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>license-maven-plugin</artifactId>
+				<version>1.7</version>
+				<configuration>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>update-file-header</goal>
+						</goals>
+						<phase>process-sources</phase>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
